@@ -11,9 +11,22 @@ import WebKit
 
 struct ContentView: View {
     
+    @State private var selected: Int = 0
+    @State private var websites: [String] = ["developer.apple.com", "google.com", "twitter.com"]
+    
     var body: some View {
+
+            Picker(selection: $selected, label: Text("")) {
+                
+                ForEach(0..<websites.count) {
+                    
+                    Text(self.websites[$0]).tag($0)
+                }
+            }.pickerStyle(SegmentedPickerStyle())
+
         
-        Text("Hello World!")
+        
+    
     }
 }
 struct ContentView_Previews: PreviewProvider {
