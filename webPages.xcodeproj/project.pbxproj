@@ -15,6 +15,7 @@
 		DABAA6E023F0021D009795DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABAA6DE23F0021D009795DE /* LaunchScreen.storyboard */; };
 		DABAA6EB23F0021D009795DE /* webPagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABAA6EA23F0021D009795DE /* webPagesTests.swift */; };
 		DABAA6F623F0021D009795DE /* webPagesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABAA6F523F0021D009795DE /* webPagesUITests.swift */; };
+		DABAA74423F89BBD009795DE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABAA74323F89BBD009795DE /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		DABAA6F123F0021D009795DE /* webPagesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = webPagesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABAA6F523F0021D009795DE /* webPagesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webPagesUITests.swift; sourceTree = "<group>"; };
 		DABAA6F723F0021D009795DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DABAA74123F89BBD009795DE /* webPages.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = webPages.entitlements; sourceTree = "<group>"; };
+		DABAA74323F89BBD009795DE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DABAA74423F89BBD009795DE /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,7 @@
 				DABAA6E923F0021D009795DE /* webPagesTests */,
 				DABAA6F423F0021D009795DE /* webPagesUITests */,
 				DABAA6D123F00212009795DE /* Products */,
+				DABAA74223F89BBD009795DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +104,7 @@
 		DABAA6D223F00212009795DE /* webPages */ = {
 			isa = PBXGroup;
 			children = (
+				DABAA74123F89BBD009795DE /* webPages.entitlements */,
 				DABAA6D323F00213009795DE /* AppDelegate.swift */,
 				DABAA6D523F00213009795DE /* SceneDelegate.swift */,
 				DABAA6D723F00213009795DE /* ContentView.swift */,
@@ -134,6 +140,14 @@
 				DABAA6F723F0021D009795DE /* Info.plist */,
 			);
 			path = webPagesUITests;
+			sourceTree = "<group>";
+		};
+		DABAA74223F89BBD009795DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DABAA74323F89BBD009795DE /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = webPages/webPages.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"webPages/Preview Content\"";
 				DEVELOPMENT_TEAM = 524ZVN5P7L;
@@ -454,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = webPages/webPages.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"webPages/Preview Content\"";
 				DEVELOPMENT_TEAM = 524ZVN5P7L;
